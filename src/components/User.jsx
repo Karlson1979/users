@@ -3,7 +3,7 @@ import { useState } from 'react'
 import css from '../components/User.module.css'
 
 export const User = ({name,lastname,email,tel}) => {
-const [hide,setHide]=useState(false)
+const [hide,setHide]=useState(true)
     const hideBtn=()=>{
         setHide(prevHide=>!prevHide)
       }
