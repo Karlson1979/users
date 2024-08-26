@@ -1,0 +1,62 @@
+[
+    {
+      "name": "Alyashko",
+      "lastname": "Aleksandrovich",
+      "email": "alyashko@example.com",
+      "tel": "+1234567890"
+    },
+    {
+      "name": "Ivan",
+      "lastname": "Petrov",
+      "email": "ivan.petrov@example.com",
+      "tel": "+0987654321"
+    },
+    {
+      "name": "Maria",
+      "lastname": "Sidorova",
+      "email": "maria.sidorova@example.com",
+      "tel": "+1122334455"
+    },
+    {
+      "name": "Sergey",
+      "lastname": "Ivanov",
+      "email": "sergey.ivanov@example.com",
+      "tel": "+2233445566"
+    },
+    {
+      "name": "Olga",
+      "lastname": "Smirnova",
+      "email": "olga.smirnova@example.com",
+      "tel": "+3344556677"
+    },
+    {
+      "name": "Dmitry",
+      "lastname": "Kuznetsov",
+      "email": "dmitry.kuznetsov@example.com",
+      "tel": "+4455667788"
+    },
+    {
+      "name": "Elena",
+      "lastname": "Popova",
+      "email": "elena.popova@example.com",
+      "tel": "+5566778899"
+    },
+    {
+      "name": "Andrey",
+      "lastname": "Vasiliev",
+      "email": "andrey.vasiliev@example.com",
+      "tel": "+6677889900"
+    },
+    {
+      "name": "Natalia",
+      "lastname": "Pavlova",
+      "email": "natalia.pavlova@example.com",
+      "tel": "+7788990011"
+    },
+    {
+      "name": "Alexey",
+      "lastname": "Sokolov",
+      "email": "alexey.sokolov@example.com",
+      "tel": "+8899001122"
+    }
+  ]

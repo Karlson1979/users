@@ -1,0 +1,20 @@
+.hide{
+    display: none ;
+}
+/* .show{
+    display: block;
+    
+} */
+.cardBorder{
+   border: 1px solid red;
+  
+}
+.card{
+    border: none;
+}
+
+.cardUser{
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
