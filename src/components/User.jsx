@@ -4,12 +4,13 @@ import { useState } from 'react'
 
 import css from '../components/User.module.css'
 import clsx from 'clsx'
-export const User = ({name,lastname,email,tel}) => {
+export const User = ({name,lastname,email,tel,handleClick}) => {
 const [hide,setHide]=useState(true)
     const hideBtn=()=>{
         setHide(prevHide=>!prevHide)
       }
-
+      
+      
   return (
     <div className={hide?css.card:css.cardBorder}>
         
@@ -20,6 +21,7 @@ const [hide,setHide]=useState(true)
         <li>{tel}</li>
     </ol>
     <button type='button' onClick={hideBtn}>{hide? `SHOW ${lastname}`:'HIDE'}</button>
+    <button type='button' onClick={()=>handleClick(name)}>name</button>
     
 
     </div>

@@ -20,11 +20,13 @@ const reset=()=>{
    setCounter(0)
   }
   useEffect(()=>{localStorage.setItem('counter', counter)},[counter])
- 
+  const handleClick=(name)=>{
+    console.log ('name:', name)
+   }
   return (
     <>
     <SectionUser>
-    <UserList users={users}/>
+    <UserList users={users} handleClick={handleClick}/>
     </SectionUser>
     <Counter increment={increment} decrement={decrement} reset={reset} counter={counter}/>
     </>
