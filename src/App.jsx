@@ -1,19 +1,32 @@
-
+import { useState, useEffect } from "react"
 
 
 import { UserList } from "./components/UserList"
 import users from './users.json'
 import {SectionUser} from './components/SectionUser'
+import { Counter } from "./components/Counter"
 
 function App() {
-  
-  
+const[counter,setCounter]=useState(()=>{const saveCounter=localStorage.getItem('counter')
+return saveCounter!==null? Number (saveCounter):0})
+
+  const increment=()=>{
+    setCounter(counter+1)
+  }
+  const decrement=()=>{
+    setCounter(counter-1)
+  }
+const reset=()=>{
+   setCounter(0)
+  }
+  useEffect(()=>{localStorage.setItem('counter', counter)},[counter])
  
   return (
     <>
     <SectionUser>
     <UserList users={users}/>
     </SectionUser>
+    <Counter increment={increment} decrement={decrement} reset={reset} counter={counter}/>
     </>
   )
 }
