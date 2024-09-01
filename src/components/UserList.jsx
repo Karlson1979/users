@@ -12,7 +12,7 @@ export const UserList = ({users, hideBtn, hide}) => {
                <User
                key={user.email}
                name={user.name}
-               lastname={user.lastName}
+               lastName={user.lastName}
                email={user.email}
                tel={user.tel}
                hideBtn={hideBtn}

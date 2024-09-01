@@ -4,7 +4,7 @@ import { useState } from 'react'
 
 import css from '../components/User.module.css'
 import clsx from 'clsx'
-export const User = ({name,lastname,email,tel}) => {
+export const User = ({name,lastName,email,tel}) => {
 const [hide,setHide]=useState(true)
     const hideBtn=()=>{
         setHide(prevHide=>!prevHide)
@@ -15,11 +15,11 @@ const [hide,setHide]=useState(true)
         
     <ol className={hide?css.hide:css.show}>
         <li>{name}</li>
-        <li>{lastname}</li>
+        <li>{lastName}</li>
         <li>{email}</li>
         <li>{tel}</li>
     </ol>
-    <button type='button' onClick={hideBtn}>{hide? `SHOW ${lastname}`:'HIDE'}</button>
+    <button type='button' onClick={hideBtn}>{hide? `SHOW ${lastName}`:'HIDE'}</button>
     
 
     </div>

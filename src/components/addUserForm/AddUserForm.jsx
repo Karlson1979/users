@@ -8,12 +8,12 @@ const formElements=event.currentTarget.elements
 const name=formElements.name.value
 const lastName=formElements.lastName.value
 const email=formElements.email.value
-const phone=formElements.phone.value
+const tel=formElements.tel.value
 const userObject={
 lastName,
   name,
   email,
-  phone,
+  tel,
 }
 addUser(userObject)
 event.currentTarget.reset()
@@ -34,7 +34,7 @@ event.currentTarget.reset()
         </label>
         <label>
             <span>Phone </span>
-        <input type="phone" name="phone" required/>
+        <input type="phone" name="tel" required/>
         </label>
         <button type='submit'>Add User</button>
     </form>
