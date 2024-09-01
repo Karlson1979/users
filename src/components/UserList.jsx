@@ -2,7 +2,7 @@ import { User } from "./User";
 import React, { useState } from 'react'
 import css from '../components/User.module.css'
 
-export const UserList = ({users, hideBtn, hide}) => {
+export const UserList = ({users, hideBtn, hide,deleteUser}) => {
  
 
   return (
@@ -10,13 +10,15 @@ export const UserList = ({users, hideBtn, hide}) => {
         {users.map((user)=>{
             return(
                <User
-               key={user.email}
+               key={user.id}
                name={user.name}
                lastName={user.lastName}
                email={user.email}
                tel={user.tel}
                hideBtn={hideBtn}
                hide={hide}
+               deleteUser={deleteUser}
+               id={user.id}
         
             
                />

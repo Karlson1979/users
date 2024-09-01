@@ -10,6 +10,8 @@ import { nanoid } from 'nanoid'
 function App() {
   const [users, setUser]=useState(usersData)
 
+  localStorage.setItem('user',JSON.stringify(users))
+
   const addUser=(newuser)=>{
     const finalUser={
       ...newuser, 
@@ -18,17 +20,21 @@ function App() {
     setUser([finalUser,...users])
 
   }
- 
+ const deleteUser=(userId)=>{
+ setUser (users.filter((item)=>{
+return item.id !==userId
+  }))
+ }
  
   return (
     <>  
     <SectionUser>
-      <AddUserForm addUser={addUser}/>
+      <AddUserForm addUser={addUser} />
     </SectionUser>
     
     <SectionUser>
     
-    <UserList users={users}  />
+    <UserList users={users} deleteUser={deleteUser} />
     </SectionUser>
     </>
   )
