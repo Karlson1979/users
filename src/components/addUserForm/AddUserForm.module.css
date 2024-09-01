@@ -1,0 +1,33 @@
+.form{
+    border: 2px solid rgb(37, 93, 136);
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    flex-direction: column;
+  max-width:500px;
+   background-color: rgba(78, 122, 223, 0.5);
+   text-align: center;
+   margin: 20px auto;
+  
+    
+
+}
+label{
+    margin: 5px 5px;
+    
+}
+input{
+    margin-left: 10px;
+}
+span{
+    display: block;
+}
+button{
+ 
+    margin: 10px auto;
+    cursor: pointer;
+    background-color: rgba(78, 122, 223, 0.5);
+    
+}
