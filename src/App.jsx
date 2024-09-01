@@ -13,10 +13,13 @@ function App() {
   {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
 ]
  const [contacts,SetContacts]=useState(contactData)
+ const addContact=()=>{
+  return SetContacts(contactObj,...contacts)
+ }
 
   return (
     <>
-  <ContactForm/>
+  <ContactForm addContact={addContact}/>
     <ContactList contacts={contacts}/>
     </>
   )
