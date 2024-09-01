@@ -8,7 +8,7 @@ import { AddUserForm } from "./components/addUserForm/AddUserForm"
 import { nanoid } from 'nanoid'
 
 function App() {
-  const [users, setUser]=useState(usersData)
+  const [users, setUser]=useState({})
 
   const addUser=(newuser)=>{
     const finalUser={
