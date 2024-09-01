@@ -4,7 +4,7 @@ import { useState } from "react"
 import { ContactForm } from "./components/ContactForm"
 import { ContactList } from "./components/ContactList"
 
-
+import {nanoid} from 'nanoid'
 function App() {
   const contactData=
   [{id: 'id-1', name: 'Rosie Simpson', number: '459-12-56'},
@@ -13,9 +13,14 @@ function App() {
   {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
 ]
  const [contacts,SetContacts]=useState(contactData)
- const addContact=()=>{
-  return SetContacts(contactObj,...contacts)
+ const addContact=(newContact)=>{
+  const finalContact={
+    ...newContact,
+    id:nanoid()
+  }
+ SetContacts([finalContact,...contacts])
  }
+
 
   return (
     <>
