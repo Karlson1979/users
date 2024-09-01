@@ -13,6 +13,7 @@ function App() {
   {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
 ]
  const [contacts,SetContacts]=useState(contactData)
+
  const addContact=(newContact)=>{
   const finalContact={
     ...newContact,
@@ -20,12 +21,16 @@ function App() {
   }
  SetContacts([finalContact,...contacts])
  }
-
+const deleteContact=(contactId)=>{
+  return SetContacts (contacts.filter((list)=>{
+  return list.id !==contactId
+  }))
+}
 
   return (
     <>
   <ContactForm addContact={addContact}/>
-    <ContactList contacts={contacts}/>
+    <ContactList contacts={contacts} deleteContact={deleteContact}/>
     </>
   )
 }
