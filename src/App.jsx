@@ -13,7 +13,7 @@ function App() {
   {id: 'id-4', name: 'Annie Copeland', number: '227-91-26'},
 ]
  const [contacts,SetContacts]=useState(contactData)
-
+const [search,setSearch]=useState('')
  const addContact=(newContact)=>{
   const finalContact={
     ...newContact,
@@ -26,11 +26,20 @@ const deleteContact=(contactId)=>{
   return list.id !==contactId
   }))
 }
-
+const handleSearch=(event)=>{
+  const value=event.target.value
+  setSearch(value)
+}
+const filterSearch = () => {
+  return contacts.filter((contact) =>
+    contact.name.toLowerCase().includes(search.toLowerCase())
+  );
+};
   return (
     <>
   <ContactForm addContact={addContact}/>
-    <ContactList contacts={contacts} deleteContact={deleteContact}/>
+  <input type="text" name="search" value={search} onChange={handleSearch}/>
+    <ContactList contacts={filterSearch()} deleteContact={deleteContact} filterSearch={filterSearch}/>
     </>
   )
 }
