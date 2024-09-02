@@ -9,6 +9,7 @@ import { nanoid } from 'nanoid'
 
 function App() {
   const [users, setUser]=useState(usersData)
+  const[search,setSearch]=useState('')
 
   localStorage.setItem('user',JSON.stringify(users))
 
@@ -26,15 +27,22 @@ return item.id !==userId
   }))
  }
  
+ const handleSearch=(event)=>{
+  const value=event.target.value
+  setSearch(value)
+
+ }
+
+ const searchUser=users.filter((user)=>user.lastName.toLowerCase().includes(search.toLowerCase()))
   return (
     <>  
     <SectionUser>
       <AddUserForm addUser={addUser} />
     </SectionUser>
-    
+    <input type="text" placeholder="searh contact" value={search} onChange={handleSearch}></input>
     <SectionUser>
     
-    <UserList users={users} deleteUser={deleteUser} />
+    <UserList users={users} deleteUser={deleteUser} searchUser={searchUser} />
     </SectionUser>
     </>
   )
